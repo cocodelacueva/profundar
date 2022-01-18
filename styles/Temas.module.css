@@ -1,0 +1,56 @@
+.main_contenedor {
+    padding: 7rem 10% 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.page_header h1 {
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.page_header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    height: .1rem;
+    width: 100%;
+    background-color: #666;
+    left: 50%;
+    transform: translate(-50%);
+    transition: width 200ms;
+}
+
+.page_header p {
+    margin-bottom: 1rem;
+}
+
+.temas_container {
+
+}
+
+.page_footer {
+    margin-top: 5rem;
+}
+
+.page_footer h2 {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .page_footer {
+        margin-top: 1rem;
+        background-color: var(--color_primary);
+        color: var(--color_primary_constrast);
+        flex-grow: 1;
+        padding: 1rem 5% 2rem;
+    }
+}

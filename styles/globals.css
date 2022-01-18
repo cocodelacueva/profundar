@@ -5,8 +5,8 @@
   --font_primary: 'Nunito', sans-serif;
   --font_size_base: 16px;
   --line_height_base: 18px;
-  --color_background_body: #fff;
-  --color_font_std: #444;
+  --color_primary_constrast: #fff;
+  --color_primary: #444;
 }
 
 @media (min-width: 768px) {
@@ -47,15 +47,15 @@
   font-size: var(--font_size_base);
   line-height: var(--line_height_base);
   font-weight: 300;
-  background-color: var(--color_background_body);
-  color: var(--color_font_std);
+  background-color: var(--color_primary_constrast);
+  color: var(--color_primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 3.1rem;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
 }
 
 h2 {
@@ -86,4 +86,11 @@ h4 {
 strong {
   font-family: var(--font_primary);
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
 }

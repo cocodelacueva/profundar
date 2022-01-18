@@ -1,7 +1,5 @@
 import '../styles/reset.css'
 import '../styles/globals.css';
-import '../styles/Header.component.css';
-import '../styles/Footer.component.css';
 
 import Head from 'next/head';
 

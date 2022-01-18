@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import styles from './styles/Header.module.css'
 
 export default function Header() {
     return (
-        <header className='main_header'>
-            <nav className='main_nav'>
+        <header className={styles.main_header}>
+            <nav className={styles.main_nav}>
                 <Link href="/">
                     <a>Profund<span></span>ar</a>
                 </Link>
-                <Link href="/tecnologias">
-                    <a>Tecnologías</a>
+                <Link href="/temas">
+                    <a>Temas</a>
                 </Link>
                 
                 <a href='https://github.com/cocodelacueva/profundar' target="_blank">Sobre esto!</a>

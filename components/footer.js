@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import styles from './styles/Footer.module.css'
 
 export default function Footer() {
     return (
-        <footer className='main_footer'>
-            <nav className='nav_footer'>
+        <footer className={styles.main_footer}>
+            <nav className={styles.nav_footer}>
                 <Link href="/inicio">
                     <a>Presentación</a>
                 </Link>
@@ -16,7 +17,7 @@ export default function Footer() {
                 
             </nav>
 
-            <p className='copy_footer'>© 2022 - De uso público... </p>
+            <p className={styles.copy_footer}>© 2022 - De uso público... </p>
 
         </footer>
     )
