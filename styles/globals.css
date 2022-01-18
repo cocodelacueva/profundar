@@ -1,16 +1,89 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Raleway:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,300&family=Raleway:wght@300&display=swap');
+:root {
+  --font_titles: 'Raleway', sans-serif;
+  --font_primary: 'Nunito', sans-serif;
+  --font_size_base: 16px;
+  --line_height_base: 18px;
+  --color_background_body: #fff;
+  --color_font_std: #444;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media (min-width: 768px) {
+  :root {
+    --font_size_base: 24px;
+    --line_height_base: 28px;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@media (min-width: 992px) {
+  :root {
+    --font_size_base: 16px;
+    --line_height_base: 18px;
+  }
+}
+
+@media (min-width: 1480px) {
+  :root {
+    --font_size_base: 20px;
+    --line_height_base: 24px;
+  }
+}
+
+@media (min-width: 1900px) {
+  :root {
+    --font_size_base: 24px;
+    --line_height_base: 28px;
+  }
+}
+
+#root {
+  font-family: var(--font_primary);
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-size: var(--font_size_base);
+  line-height: var(--line_height_base);
+  font-weight: 300;
+  background-color: var(--color_background_body);
+  color: var(--color_font_std);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.title-font {
+  font-family: var(--font_titles);
+  font-weight: 300;
+}
+
+.primary-font {
+  font-family: var(--font_primary);
+  font-weight: 300;
+}
+
+strong {
+  font-family: var(--font_primary);
+  font-weight: 500;
 }

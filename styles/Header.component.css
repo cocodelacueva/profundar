@@ -1,0 +1,24 @@
+.main_header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main_header:hover {
+    background-color: rgba(251,251,251,0.8);
+}
+
+.main_nav {
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main_nav a {
+    margin: .9rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
