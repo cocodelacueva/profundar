@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       
       <h1 className={styles.main_title}>
-        <Link href="/temas">
+        <Link href="/posts">
         Profund.ar
         </Link>
       </h1>

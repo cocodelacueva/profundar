@@ -1,9 +1,10 @@
 module.exports = {
-    temas: [
+    posts: [
         {
             id: 1,
-            slug: "vercel",
+            slug: "next-js",
             name: "Blog con NextJS",
+            date: "2022-01-19",
             shortDescription: "Aprendiendo a armar un blog con Next JS. Utilizando la modalidad server render o generando archivo estáticos",
             documentation: "https://nextjs.org/docs/getting-started"
         },
@@ -11,6 +12,7 @@ module.exports = {
             id: 2,
             slug: "django-docker",
             name: "Desarrollar Django con Docker",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://docs.djangoproject.com/en/4.0/"
         },
@@ -18,6 +20,7 @@ module.exports = {
             id: 3,
             slug: "Grow",
             name: "Grow",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://grow.io/"
         },
@@ -25,6 +28,7 @@ module.exports = {
             id: 4,
             slug: "amp",
             name: "AMP Acelerate Mobile Pages",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://amp.dev/es/"
         },
@@ -32,6 +36,7 @@ module.exports = {
             id: 5,
             slug: "cms-con-strapi",
             name: "CMS con strapi",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://strapi.io/resource-center"
         },
@@ -39,6 +44,7 @@ module.exports = {
             id: 6,
             slug: "cms-con-contentful",
             name: "CMS con contentful",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://strapi.io/resource-center"
         },
@@ -46,6 +52,7 @@ module.exports = {
             id: 7,
             slug: "swc",
             name: "SWC como alternativa a Babel",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://swc.rs/docs/getting-started"
         },
@@ -53,6 +60,7 @@ module.exports = {
             id: 8,
             slug: "rust",
             name: "RUST",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://www.rust-lang.org/"
         },
@@ -60,6 +68,7 @@ module.exports = {
             id: 9,
             slug: "vercel",
             name: "VERCEL",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://vercel.com/docs"
         },
@@ -67,6 +76,7 @@ module.exports = {
             id: 10,
             slug: "divi",
             name: "DIVI",
+            date: "2022-01-19",
             shortDescription: "",
             documentation: "https://www.elegantthemes.com/gallery/divi/"
         },
@@ -74,6 +84,7 @@ module.exports = {
             id: 11,
             slug: "ia",
             name: "IA",
+            date: "2022-01-19",
             shortDescription: "Me interesa aprender Inteligencia Artificial.",
             documentation: ""
         },       

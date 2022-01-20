@@ -4,7 +4,7 @@ import bd from './bd';
 
 export default function handler(req, res) {
     //ajusto cantidad de items
-    bd.totalItems = bd.temas.length
+    bd.totalItems = bd.posts.length
 
     res.status(200).json({error: false, updatedbd: bd.updated, body:bd})
 }

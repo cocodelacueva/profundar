@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './styles/TemaCorto.module.css'
+import styles from './styles/PostShort.module.css'
 
 export default function TemaCorto(articulo) {
     //textos
@@ -9,11 +9,11 @@ export default function TemaCorto(articulo) {
             <h1 className={styles.title}>
                 {articulo.name}
             </h1>
-            <p className={styles.short_description}>
+            <div className={styles.short_description}>
                 {articulo.shortDescription}
-            </p>
+            </div>
 
-            <Link href={`/${articulo.slug}`}>
+            <Link href={`/post/${articulo.slug}`}>
                 <a className={styles.cta}>Profundar</a>
             </Link>
 
