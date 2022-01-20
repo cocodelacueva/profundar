@@ -1,22 +1,8 @@
-import Head from 'next/head';
-import styles from '../styles/Temas.module.css';
-
-//componentes
-import Header from '../components/header';
-import Footer from '../components/footer';
-import TemaCorto from '../components/tema.corto';
-
-export default function Temas() {
-    //textos
-    const tituloPagina = 'Tecnologías:';
-    const short_description = 'Profundate en cualquier tema y aprendelo a fondo.';
-    const tituloFooter = "Profundar a futuro..."
-    const shortDescriptionFooter = "¿Qué deberiamos aprender?"
-
-    const temas = [
+module.exports = {
+    temas: [
         {
             id: 1,
-            slug: "next-js",
+            slug: "vercel",
             name: "Blog con NextJS",
             shortDescription: "Aprendiendo a armar un blog con Next JS. Utilizando la modalidad server render o generando archivo estáticos",
             documentation: "https://nextjs.org/docs/getting-started"
@@ -88,43 +74,10 @@ export default function Temas() {
             id: 11,
             slug: "ia",
             name: "IA",
-            shortDescription: "",
+            shortDescription: "Me interesa aprender Inteligencia Artificial.",
             documentation: ""
-        },        
-    ]
-
-    return (
-        <>
-        <Head>
-            <title>PROFUND.AR - ¿Qué te gustaría aprender?</title>
-            <meta name="description" content="Colección de tecnologías para profundar en..." />
-        </Head>
-
-        <Header />
-
-        <main role="main" className={styles.main_contenedor}>
-            <header className={styles.page_header}>
-                <h1 className='title-font'>{tituloPagina}</h1>
-                <p>{short_description}</p>
-            </header>
-
-            <div className={styles.grid}>
-                <section className={styles.temas_container}>
-                    {
-                        //recorro temas
-                        temas.map(articulo => TemaCorto(articulo))
-                    }
-                    
-
-                </section>
-
-                <footer className={styles.page_footer}>
-                    <h2>{tituloFooter}</h2>
-                    <p>{shortDescriptionFooter}</p>
-                </footer>
-            </div>
-        </main>
-        
-        <Footer />
-        </>
-)}
+        },       
+    ],
+    totalItems: 11,
+    updated: '2022-01-19'
+}
