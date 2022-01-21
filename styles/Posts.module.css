@@ -88,8 +88,7 @@
 
     .page_footer {
         margin-top: 2rem;
-        flex-grow: 1;
-        max-width: 540px;
+        max-width: 640px;
         margin-left: 3%;
         padding: 1rem 2rem 2rem;
     }
@@ -102,5 +101,12 @@
     .page_footer p {
         font-size: .8rem;
         line-height: 1rem;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .page_footer {
+        flex-grow: 1;
     }
 }

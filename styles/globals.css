@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Raleway:wght@300&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,300&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Raleway:wght@300&display=swap');
 :root {
   --font_titles: 'Raleway', sans-serif;
   --font_primary: 'Nunito', sans-serif;
@@ -25,7 +24,7 @@
 
 @media (min-width: 1480px) {
   :root {
-    --font_size_base: 20px;
+    --font_size_base: 18px;
     --line_height_base: 24px;
   }
 }
@@ -66,13 +65,13 @@ h2 {
 h3 {
   font-size: 2rem;
   line-height: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .title-font {
@@ -85,9 +84,9 @@ h4 {
   font-weight: 300;
 }
 
-strong {
+strong, em {
   font-family: var(--font_primary);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {

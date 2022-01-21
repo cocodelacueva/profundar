@@ -37,3 +37,9 @@
         display: block;
     }
 }
+
+@media (min-width: 1480px) {
+    .main_nav a {
+        font-size: 1rem;
+    }
+}

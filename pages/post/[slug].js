@@ -1,10 +1,13 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import styles from '../../styles/Post.module.css';
+import profundarSVG from '../../public/images/profundar.svg';
 
 //componentes
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import Link from 'next/link';
 
 export default function Post( { data } ) {
     const
@@ -41,7 +44,10 @@ export default function Post( { data } ) {
                     </header>
                     
                     <section className={styles.content_post}>
-                        {data.body.content != '' ? dangerouslySetInnerHTML={  __html: data.body.content  } : data.body.shortDescription}
+                        {data.body.content != '' ? 
+                        <div dangerouslySetInnerHTML={{  __html: data.body.content  }}></div>
+                        : data.body.shortDescription}
+                        
                     </section>
                     
                     <footer className={styles.footer_post}>
@@ -71,6 +77,11 @@ export default function Post( { data } ) {
             <footer className={styles.page_footer}>
                 <h2>{tituloFooter}</h2>
                 <p>{shortDescriptionFooter}</p>
+                <Image className={styles.image_background}
+                    src={profundarSVG}
+                    alt="©Profundate por Emi"
+                    layout='responsive'
+                    />
             </footer>
         </div>
         
