@@ -6,6 +6,7 @@ module.exports = {
             name: "Blog con NextJS",
             date: "2022-01-19",
             shortDescription: "Aprendiendo a armar un blog con Next JS. Utilizando la modalidad server render o generando archivo estáticos",
+            content: '<h2>Seria un título</h2><p>Parrafo 1</p><p><strong>Parrafo</strong> 2 que es más <a href="https://google.com">largo</p><p>Párrafo 3 debería ser más largo también.</p>',
             documentation: "https://nextjs.org/docs/getting-started"
         },
         {

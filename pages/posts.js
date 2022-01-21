@@ -1,11 +1,16 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import styles from '../styles/Posts.module.css';
+import profundarSVG from '../public/images/profundar.svg';
 
 //componentes
 import Header from '../components/header';
 import Footer from '../components/footer';
 import PostShort from '../components/post.short';
-import Link from 'next/link';
+
+
 
 export default function Posts( { data } ) {
     //textos
@@ -19,50 +24,57 @@ export default function Posts( { data } ) {
 
     return (
         <>
-        <Head>
-            <title>PROFUND.AR - ¿Qué te gustaría aprender?</title>
-            <meta name="description" content="Colección de tecnologías para profundar en..." />
-        </Head>
+            <Head>
+                <title>PROFUND.AR - ¿Qué te gustaría aprender?</title>
+                <meta name="description" content="Colección de tecnologías para profundar en..." />
+            </Head>
 
-        <Header />
+            <Header />
 
-        <main role="main" className={styles.main_container}>
-            <header className={styles.page_header}>
-                <h1 className='title-font'>{tituloPagina}</h1>
-                <p>{short_description}</p>
-            </header>
+            <main role="main" className={styles.main_container}>
+                <header className={styles.page_header}>
+                    <h1 className='title-font'>{tituloPagina}</h1>
+                    <p>{short_description}</p>
+                </header>
 
-            <div className={styles.grid}>
+                <div className={styles.grid}>
 
-                {data && !data.error ? 
-                <section className={styles.posts_container}>
-                    {
-                        //recorro Posts
-                        data.body.posts.map(articulo => PostShort(articulo))
-                    }
-                </section> 
-                :
-                //no hay contenido
-                <section className={styles.no_data_container}>
-                    <h2>
-                        {noDataTitle}
-                    </h2>
-                    <p>
-                        {noDataMessage}
-                    </p>
-                    <Link href="/"><a> {noDataButtonText}</a></Link>
+                    {data && !data.error ? 
+                    <section className={styles.posts_container}>
+                        {
+                            //recorro Posts
+                            data.body.posts.map(articulo => PostShort(articulo))
+                        }
+                    </section> 
+                    :
+                    //no hay contenido
+                    <section className={styles.no_data_container}>
+                        <h2>
+                            {noDataTitle}
+                        </h2>
+                        <p>
+                            {noDataMessage}
+                        </p>
+                        <Link href="/"><a> {noDataButtonText}</a></Link>
+                        
+
+                    </section> }
                     
+                    <footer className={styles.page_footer}>
+                        <h2>{tituloFooter}</h2>
+                        <p>{shortDescriptionFooter}</p>
 
-                </section> }
-                
-                <footer className={styles.page_footer}>
-                    <h2>{tituloFooter}</h2>
-                    <p>{shortDescriptionFooter}</p>
-                </footer>
-            </div>
-        </main>
-        
-        <Footer />
+                        <Image className={styles.image_background}
+                            src={profundarSVG}
+                            alt="©Profundate por Emi"
+                            layout='responsive'
+                            />
+                    </footer>
+                    
+                </div>
+            </main>
+            
+            <Footer />
         </>
 )}
 

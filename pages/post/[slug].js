@@ -6,12 +6,10 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Link from 'next/link';
 
-
 export default function Post( { data } ) {
     const
         postFooterTitle = "¿Te empapaste lo suficiente?",
-        postFooterText = "Podés seguir aprendiendo",
-        postFooterLink = "Volver a empezar...",
+        postFooterText = "Volver a empezar y seguir aprendiendo.",
         tituloFooter = "Profundar a futuro...",
         shortDescriptionFooter = "¿Qué deberiamos aprender?",
         noDataTitle = "Hubo un error en el contenido",
@@ -26,45 +24,48 @@ export default function Post( { data } ) {
         </Head>
 
         <Header />
-            <div className={styles.grid}>
 
-                <main role="main" className={styles.main_container}>
-                    {
-                    data && !data.error ? 
-                    <div className={styles.post_container}>
-                        <header >
-                            <h1>
-                                {data.body.name}
-                            </h1>
-                            <p>
-                                {data.body.date}
-                            </p>
-                        </header>
-                        <section>
-                                {data.body.shortDescription}
-                        </section>
-                        <footer>
-                            <h4>
-                                {postFooterTitle}
-                            </h4>
-                            <p>
-                                {postFooterText}
-                            </p>
-                            <Link href="/posts"><a>{postFooterLink}</a></Link>
-                        </footer>
-                    </div>
-                    :
-                    
-                    <div className={styles.no_data_container}>
+        <div className={styles.grid}>
+
+            <main role="main" className={styles.main_container}>
+            {
+                data && !data.error ? 
+                <div className={styles.post_container}>
+                    <header className={styles.header_post}>
                         <h1>
-                            {noDataTitle}
+                            {data.body.name}
                         </h1>
                         <p>
-                            {data.message}
+                            {data.body.date}
                         </p>
-                        <Link href="/"><a> {noDataButtonText}</a></Link>
-                    </div> 
-                }
+                    </header>
+                    
+                    <section className={styles.content_post}>
+                        {data.body.content != '' ? dangerouslySetInnerHTML={  __html: data.body.content  } : data.body.shortDescription}
+                    </section>
+                    
+                    <footer className={styles.footer_post}>
+                        <h4>
+                            {postFooterTitle}
+                        </h4>
+                        <p>
+                            {postFooterText}
+                        </p>
+                        <Link href="/posts"><a>{noDataButtonText}</a></Link>
+                    </footer>
+                </div>
+                :
+                
+                <div className={styles.no_data_container}>
+                    <h1>
+                        {noDataTitle}
+                    </h1>
+                    <p>
+                        {data.message}
+                    </p>
+                    <Link href="/"><a> {noDataButtonText}</a></Link>
+                </div> 
+            }
             </main>
 
             <footer className={styles.page_footer}>

@@ -6,10 +6,10 @@ export default function Header() {
         <header className={styles.main_header}>
             <nav className={styles.main_nav}>
                 <Link href="/">
-                    <a>Profund<span></span>ar</a>
+                    <a>Presentación</a>
                 </Link>
-                <Link href="/temas">
-                    <a>Temas</a>
+                <Link href="/posts">
+                    <a>Profund<span className="dot_decoration"></span>ar</a>
                 </Link>
                 
                 <a href='https://github.com/cocodelacueva/profundar' target="_blank">Sobre esto!</a>

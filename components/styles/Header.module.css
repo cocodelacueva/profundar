@@ -21,4 +21,19 @@
     margin: .9rem;
     text-transform: uppercase;
     font-size: .8rem;
+    display: none;
+}
+
+.main_nav a:nth-child(3) {
+    display: block;
+}
+
+.main_nav a:last-child {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .main_nav a {
+        display: block;
+    }
 }

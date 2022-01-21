@@ -5,11 +5,11 @@ export default function Footer() {
     return (
         <footer className={styles.main_footer}>
             <nav className={styles.nav_footer}>
-                <Link href="/inicio">
+                <Link href="/">
                     <a>Presentación</a>
                 </Link>
-                <Link href="/tecnologias">
-                    <a>Tecnologías</a>
+                <Link href="/posts">
+                    <a>Profund<span className="dot_decoration"></span>ar</a>
                 </Link>
                 
                 <a href='https://github.com/cocodelacueva/profundar' target="_blank">Sobre esto</a>

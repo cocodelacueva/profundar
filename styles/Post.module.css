@@ -1,25 +1,35 @@
 .grid {
-    padding: 7rem 10% 3rem;
     position: relative;
     z-index: 1;
+    padding: 7rem 10% 3rem;
+}
+
+.page_footer {
+    margin-top: 5rem;
+}
+
+.page_footer h2 {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.7rem;
 }
 
 .no_data_container {
-    margin: 6rem 0;
+    margin: 4rem 0;
 }
 
-.no_data_container h1 {
+.no_data_container h2 {
     font-family: var(--font_titles);
     font-weight: 300;
     font-size: 4rem;
-    line-height: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .no_data_container p {
     font-weight: 500;
     font-size: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .no_data_container a {
@@ -30,7 +40,59 @@
 }
 
 .post_container {
-    margin: 6rem 0;
+    margin: 2rem 0 5rem;
+}
+
+.post_container .header_post h1 {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+}
+
+.post_container .header_post p {
+    font-size: .7rem;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+}
+
+.content_post {}
+
+.footer_post {
+    margin-top: 3rem;
+}
+
+.footer_post h4 {
+    margin-bottom: 1rem;
+}
+
+.footer_post a {
+    margin-top: 1rem;
+    display: block;
+    font-size: .8rem;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .footer_post {
+        margin-top: 5rem;
+    }
+
+    .footer_post h4 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .page_footer h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .post_container .header_post h1 {
+        font-size: 3.5rem;
+        line-height: 3.8rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -41,12 +103,23 @@
     }
 
     .page_footer {
-        margin-top: 1rem;
+        margin-top: 2rem;
         background-color: var(--color_primary);
         color: var(--color_primary_constrast);
         flex-grow: 1;
-        max-width: 640px;
-        padding: 1rem 5% 2rem;
+        max-width: 540px;
+        margin-left: 3%;
+        padding: 1rem 2rem 2rem;
+    }
+
+    .page_footer h2 {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .page_footer p {
+        font-size: .8rem;
+        line-height: 1rem;
     }
 }
 
