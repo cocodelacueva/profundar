@@ -67,10 +67,6 @@
     text-decoration: underline;
 }
 
-.image_background {
-    filter: grayscale(1);
-}
-
 @media (min-width: 768px) {
     .page_footer h2 {
         font-size: 2.5rem;

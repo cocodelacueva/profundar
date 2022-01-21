@@ -106,10 +106,6 @@
     text-decoration: underline;
 }
 
-.image_background {
-    filter: grayscale(1);
-}
-
 @media (min-width: 768px) {
     .footer_post {
         margin-top: 5rem;
