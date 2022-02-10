@@ -12,8 +12,8 @@ export default function Header() {
                     <a>Profund<span className="dot_decoration"></span>ar</a>
                 </Link>
                 
-                <a href='https://github.com/cocodelacueva/profundar' target="_blank">Sobre esto!</a>
-                <a href='https://www.linkedin.com/in/cocodelacueva/' target="_blank">Contacto</a>
+                <a href='https://github.com/cocodelacueva/profundar' target="_blank" rel="noreferrer">Sobre esto!</a>
+                <a href='https://www.linkedin.com/in/cocodelacueva/' target="_blank" rel="noreferrer">Contacto</a>
                 
             </nav>
         </header>
