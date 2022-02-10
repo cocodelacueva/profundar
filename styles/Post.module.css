@@ -16,6 +16,17 @@
     margin-bottom: 0.7rem;
 }
 
+.page_footer p {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.page_footer a {
+    display: block;
+    margin: .5rem 0;
+    font-size: .8rem;
+}
+
 .no_data_container {
     margin: 4rem 0;
 }
@@ -106,10 +117,6 @@
     text-decoration: underline;
 }
 
-.post_wrapper {
-    
-}
-
 @media (min-width: 768px) {
     .footer_post {
         margin-top: 5rem;
@@ -152,8 +159,10 @@
     }
 
     .page_footer p {
-        font-size: .8rem;
+        font-size: .9rem;
         line-height: 1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
     }
 }
 

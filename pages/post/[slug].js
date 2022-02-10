@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MDXProvider } from '@mdx-js/react'
 
 import styles from '../../styles/Post.module.css';
 import profundarSVG from '../../public/images/profundar.svg';
@@ -14,6 +13,8 @@ import { getFilesBySlug, getFiles } from '../../lib/mdx';
 
 import { MDXRemote } from 'next-mdx-remote';
 
+
+
 export default function Post( { source, frontmatter } ) {
     const
         postFooterTitle = "¿Te empapaste lo suficiente?",
@@ -23,7 +24,25 @@ export default function Post( { source, frontmatter } ) {
         noDataTitle = "Hubo un error en el contenido",
         noDataButtonText = "Volver al inicio";
    
-    
+    const topPosts = [
+        { 
+            title: 'Blog next js y Markdown',
+            slug: 'blog-next-js-y-markdown' },
+        { 
+            title: 'CMS con Contentful',
+            slug: 'cms-con-contentful' },
+        { 
+            title: 'CMS con Strapi',
+            slug: 'cms-con-strapi' },
+        { 
+            title: 'Vercel',
+            slug: 'vercel' },
+        { 
+            title: 'Construyendo páginas con Vite',
+            slug: 'construyendo-paginas-con-vite'
+        }
+    ];
+
     return (
         <>
         <Head>
@@ -36,14 +55,21 @@ export default function Post( { source, frontmatter } ) {
         <div className={styles.grid}>
 
             <main role="main" className={styles.main_container}>
-            <div className={styles.content_post}>
-                <MDXRemote {...source} />
-            </div>
+                <div className={styles.content_post}>
+                    <MDXRemote {...source} />
+                </div>
             </main>
 
             <footer className={styles.page_footer}>
                 <h2>{tituloFooter}</h2>
                 <p>{shortDescriptionFooter}</p>
+                <ul>
+                    {topPosts.map( (el, index)=><li key={index}>
+                        <Link href={`/post/${el.slug}`}>
+                            {el.title}
+                        </Link>
+                    </li>)}
+                </ul>
                 <Image className={styles.image_background}
                     src={profundarSVG}
                     alt="©Profundate por Emi"
@@ -78,6 +104,7 @@ export async function getStaticPaths() {
             }
         })
     )
+    
     return {
         paths,
         fallback: false
