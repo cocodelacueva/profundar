@@ -30,9 +30,8 @@
     transition: all 200ms;
 }
 
-.docs {
+.date_text {
     font-size: .6rem;
-    text-decoration: underline;
     display: block;
 }
 

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { MDXProvider } from '@mdx-js/react'
 
 import styles from '../../styles/Post.module.css';
 import profundarSVG from '../../public/images/profundar.svg';
@@ -9,7 +10,11 @@ import profundarSVG from '../../public/images/profundar.svg';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
-export default function Post( { data } ) {
+import { getFilesBySlug, getFiles } from '../../lib/mdx';
+
+import { MDXRemote } from 'next-mdx-remote';
+
+export default function Post( { source, frontmatter } ) {
     const
         postFooterTitle = "¿Te empapaste lo suficiente?",
         postFooterText = "Volver a empezar y seguir aprendiendo.",
@@ -17,12 +22,12 @@ export default function Post( { data } ) {
         shortDescriptionFooter = "¿Qué deberiamos aprender?",
         noDataTitle = "Hubo un error en el contenido",
         noDataButtonText = "Volver al inicio";
-
-
+   
+    
     return (
         <>
         <Head>
-            <title>PROFUND.AR - {data.error ? noDataTitle : data.body.name}</title>
+            <title>PROFUND.AR</title>
             <meta name="description" content="Colección de tecnologías para profundar en..." />
         </Head>
 
@@ -31,47 +36,9 @@ export default function Post( { data } ) {
         <div className={styles.grid}>
 
             <main role="main" className={styles.main_container}>
-            {
-                data && !data.error ? 
-                <div className={styles.post_container}>
-                    <header className={styles.header_post}>
-                        <h1>
-                            {data.body.name}
-                        </h1>
-                        <p>
-                            {data.body.date}
-                        </p>
-                    </header>
-                    
-                    <section className={styles.content_post}>
-                        {data.body.content != '' ? 
-                        <div dangerouslySetInnerHTML={{  __html: data.body.content  }}></div>
-                        : data.body.shortDescription}
-                        
-                    </section>
-                    
-                    <footer className={styles.footer_post}>
-                        <h4>
-                            {postFooterTitle}
-                        </h4>
-                        <p>
-                            {postFooterText}
-                        </p>
-                        <Link href="/posts"><a>{noDataButtonText}</a></Link>
-                    </footer>
-                </div>
-                :
-                
-                <div className={styles.no_data_container}>
-                    <h1>
-                        {noDataTitle}
-                    </h1>
-                    <p>
-                        {data.message}
-                    </p>
-                    <Link href="/"><a> {noDataButtonText}</a></Link>
-                </div> 
-            }
+            <div className={styles.content_post}>
+                <MDXRemote {...source} />
+            </div>
             </main>
 
             <footer className={styles.page_footer}>
@@ -92,8 +59,27 @@ export default function Post( { data } ) {
 
 
 //get data from fake db
-Post.getInitialProps = async (ctx) => {
-    const res = await fetch(`http://localhost:3000/api/post/${ctx.query.slug}`)
-    const json = await res.json()
-    return { data: json }
+// Post.getInitialProps = async (ctx) => {
+//     const res = await fetch(`http://localhost:3000/api/post/${ctx.query.slug}`)
+//     const json = await res.json()
+//     return { data: json }
+// }
+
+export async function getStaticProps( {params} ) {
+    const {source, frontmatter} = await getFilesBySlug(params.slug);
+    return { props: { source, frontmatter } }
+}
+
+export async function getStaticPaths() {
+    const posts = await getFiles();
+    const paths = posts.map((post) => ({
+            params: {
+                slug: post.replace(/\.md/, ''),
+            }
+        })
+    )
+    return {
+        paths,
+        fallback: false
+    }
 }

@@ -10,9 +10,12 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import PostShort from '../components/post.short';
 
+import { getAllFilesMetaData, orderByDataDesc } from '../lib/mdx';
 
 
-export default function Posts( { data } ) {
+
+export default function Posts({posts}) {
+    
     //textos
     const tituloPagina = 'Tecnologías:',
         short_description = 'Profundate en cualquier tema y aprendelo a fondo.',
@@ -21,7 +24,7 @@ export default function Posts( { data } ) {
         noDataTitle = "¡Cuidado!",
         noDataMessage = "Esta vacío.",
         noDataButtonText = "Volver al inicio.";
-
+        
     return (
         <>
             <Head>
@@ -39,11 +42,11 @@ export default function Posts( { data } ) {
 
                 <div className={styles.grid}>
 
-                    {data && !data.error ? 
+                    {posts ? 
                     <section className={styles.posts_container}>
                         {
                             //recorro Posts
-                            data.body.posts.map(articulo => PostShort(articulo))
+                            posts.map(post => PostShort(post))
                         }
                     </section> 
                     :
@@ -63,7 +66,7 @@ export default function Posts( { data } ) {
                     <footer className={styles.page_footer}>
                         <h2>{tituloFooter}</h2>
                         <p>{shortDescriptionFooter}</p>
-
+                       
                         <Image className={styles.image_background}
                             src={profundarSVG}
                             alt="©Profundate por Emi"
@@ -76,12 +79,15 @@ export default function Posts( { data } ) {
             
             <Footer />
         </>
-)}
+    )
+}
 
-
-//get data from fake db
-Posts.getInitialProps = async ({ query }) => {
-    const res = await fetch(`http://localhost:3000/api/posts`)
-    const json = await res.json()
-    return { data: json }
+export async function getStaticProps() {
+    const posts = await getAllFilesMetaData();
+    posts.sort(orderByDataDesc).slice(0, 5);
+    return {
+        props: {
+            posts 
+        } 
+    }
 }

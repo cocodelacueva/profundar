@@ -1,23 +1,24 @@
 import Link from 'next/link'
 import styles from './styles/PostShort.module.css'
 
-export default function TemaCorto(articulo) {
+export default function PostShort(post) {
     //textos
-    const documentacionOficial = "Documentación oficial";
+    
     return (
-        <article key={articulo.id} className={styles.article_wrapper}>
+        <article key={post.id} className={styles.article_wrapper}>
             <h1 className={styles.title}>
-                {articulo.name}
+                {post.title}
             </h1>
+            <p className={styles.date_text}>
+                {post.date}
+            </p>
             <div className={styles.short_description}>
-                {articulo.shortDescription}
+                {post.shortDescription}
             </div>
 
-            <Link href={`/post/${articulo.slug}`}>
+            <Link href={`/post/${post.slug}`}>
                 <a className={styles.cta}>Profundar</a>
             </Link>
-
-            {articulo.documentation != '' ? <a className={styles.docs} href={articulo.documentation} target="_blank">{documentacionOficial}</a> : null }
 
         </article>
     )
