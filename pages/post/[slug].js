@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
+//import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '../../styles/Post.module.css';
-import profundarSVG from '../../public/images/profundar.svg';
 
 //componentes
 import Header from '../../components/header';
@@ -70,11 +69,7 @@ export default function Post( { source, frontmatter } ) {
                         </Link>
                     </li>)}
                 </ul>
-                <Image className={styles.image_background}
-                    src={profundarSVG}
-                    alt="©Profundate por Emi"
-                    layout='responsive'
-                    />
+                <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
             </footer>
         </div>
         

@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '../styles/Posts.module.css';
-import profundarSVG from '../public/images/profundar.svg';
 
 //componentes
 import Header from '../components/header';
@@ -67,11 +65,7 @@ export default function Posts({posts}) {
                         <h2>{tituloFooter}</h2>
                         <p>{shortDescriptionFooter}</p>
                        
-                        <Image className={styles.image_background}
-                            src={profundarSVG}
-                            alt="©Profundate por Emi"
-                            layout='responsive'
-                            />
+                        <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
                     </footer>
                     
                 </div>

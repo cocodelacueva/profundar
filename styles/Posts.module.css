@@ -27,8 +27,10 @@
     margin-bottom: 1rem;
 }
 
-.temas_container {
-
+.image_background {
+    position: relative;
+    display: block;
+    width: 100%;
 }
 
 .page_footer {
@@ -98,11 +100,19 @@
         font-size: .8rem;
         line-height: 1rem;
     }
+
+    .image_background {
+        max-width: 250px;
+    }
 }
 
 
 @media (min-width: 1500px) {
     .page_footer {
         flex-grow: 1;
+    }
+
+    .image_background {
+        max-width: 450px;
     }
 }

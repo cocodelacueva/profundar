@@ -9,6 +9,11 @@
 .image_background {
   opacity: .2;
   filter: grayscale(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
 }
 
 .main_title {
