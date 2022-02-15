@@ -123,6 +123,25 @@
     width: 100%;
 }
 
+.posts_selected_container {
+    margin: 3rem 0;
+}
+
+.posts_selected_container li {
+    list-style: disc;
+    padding-left: .5rem;
+    margin-left: 1.5rem;
+}
+
+.posts_selected_container a {
+    margin: 1rem 0;
+    display: block;
+}
+
+.posts_selected_container a:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 768px) {
     .footer_post {
         margin-top: 5rem;

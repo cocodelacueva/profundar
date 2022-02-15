@@ -1,5 +1,5 @@
 module.exports = {
-  basePath: '/test/next-estatico',
+  //basePath: '/test/next-estatico',
   reactStrictMode: true,
   //trailingSlash: true,
   exportPathMap: async function (

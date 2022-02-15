@@ -1,9 +1,10 @@
 ---
 id: 0
-title: "Blog con NextJS"
+title: "Blog con NextJS y Markdown"
 date: "2022-02-11"
 shortDescription: 'Aprendiendo a armar un blog con Next JS. Utilizando la modalidad server render o generando archivo estáticos con MD.'
 docs: "https://nextjs.org/docs/getting-started"
+related: 'CMS con Contentful|cms-con-contentful, CMS con Strapi|cms-con-strapi,Vercel:vercel',
 ---
 
 # Blog con NextJS

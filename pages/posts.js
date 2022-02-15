@@ -7,13 +7,14 @@ import styles from '../styles/Posts.module.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import PostShort from '../components/post.short';
+import PostsSelected from '../components/postsselected';
 
 import { getAllFilesMetaData, orderByDataDesc } from '../lib/mdx';
 
 
 
 export default function Posts({posts}) {
-    
+    const postsSelection = posts;
     //textos
     const tituloPagina = 'Tecnologías:',
         short_description = 'Profundate en cualquier tema y aprendelo a fondo.',
@@ -64,6 +65,9 @@ export default function Posts({posts}) {
                     <footer className={styles.page_footer}>
                         <h2>{tituloFooter}</h2>
                         <p>{shortDescriptionFooter}</p>
+
+                        <PostsSelected posts={postsSelection} styles={styles.posts_selected_container} />
+                        
                        
                         <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
                     </footer>

@@ -7,6 +7,7 @@ import styles from '../../styles/Post.module.css';
 //componentes
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import PostsSelected from '../../components/postsselected';
 
 import { getFilesBySlug, getFiles } from '../../lib/mdx';
 
@@ -22,25 +23,15 @@ export default function Post( { source, frontmatter } ) {
         shortDescriptionFooter = "¿Qué deberiamos aprender?",
         noDataTitle = "Hubo un error en el contenido",
         noDataButtonText = "Volver al inicio";
-   
-    const topPosts = [
-        { 
-            title: 'Blog next js y Markdown',
-            slug: 'blog-next-js-y-markdown' },
-        { 
-            title: 'CMS con Contentful',
-            slug: 'cms-con-contentful' },
-        { 
-            title: 'CMS con Strapi',
-            slug: 'cms-con-strapi' },
-        { 
-            title: 'Vercel',
-            slug: 'vercel' },
-        { 
-            title: 'Construyendo páginas con Vite',
-            slug: 'construyendo-paginas-con-vite'
-        }
-    ];
+    
+    let postsSelection = frontmatter.related ? frontmatter.related.split(',') : null;
+    let postsSelectionFilter = [];
+    if (postsSelection) {
+        postsSelection.map((post, index) =>{
+            let p = post.split('|');
+            postsSelectionFilter.push({id:index,title:p[0],slug:p[1]});
+        })
+    }
 
     return (
         <>
@@ -62,13 +53,9 @@ export default function Post( { source, frontmatter } ) {
             <footer className={styles.page_footer}>
                 <h2>{tituloFooter}</h2>
                 <p>{shortDescriptionFooter}</p>
-                <ul>
-                    {topPosts.map( (el, index)=><li key={index}>
-                        <Link href={`/post/${el.slug}`}>
-                            {el.title}
-                        </Link>
-                    </li>)}
-                </ul>
+                
+                <PostsSelected posts={postsSelectionFilter} styles={styles.posts_selected_container} />
+
                 <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
             </footer>
         </div>
