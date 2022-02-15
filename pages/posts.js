@@ -14,7 +14,15 @@ import { getAllFilesMetaData, orderByDataDesc } from '../lib/mdx';
 
 
 export default function Posts({posts}) {
-    const postsSelection = posts;
+    let count = 0;
+    const postsSelection = posts ? posts.filter((post, index) => {
+        if ( index > 2 && count < 5) {
+            count++;
+            return post;
+        }
+    }) : null;
+
+
     //textos
     const tituloPagina = 'Tecnologías:',
         short_description = 'Profundate en cualquier tema y aprendelo a fondo.',
@@ -66,9 +74,8 @@ export default function Posts({posts}) {
                         <h2>{tituloFooter}</h2>
                         <p>{shortDescriptionFooter}</p>
 
-                        <PostsSelected posts={postsSelection} styles={styles.posts_selected_container} />
-                        
-                       
+                        {postsSelection ? <PostsSelected posts={postsSelection} styles={styles.posts_selected_container} /> : null}
+                                               
                         <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
                     </footer>
                     
