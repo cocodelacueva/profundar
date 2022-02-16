@@ -76,7 +76,7 @@ export default function Posts({posts}) {
 
                         {postsSelection ? <PostsSelected posts={postsSelection} styles={styles.posts_selected_container} /> : null}
                                                
-                        <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
+                        <img src="/images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
                     </footer>
                     
                 </div>
