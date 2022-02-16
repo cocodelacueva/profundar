@@ -10,6 +10,7 @@
 .short_description {
     margin: 1rem 0 2rem;
     max-width: 640px;
+    font-weight: 300;
 }
 
 .cta {

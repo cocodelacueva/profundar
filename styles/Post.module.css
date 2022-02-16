@@ -197,9 +197,6 @@
 
 
 @media (min-width: 1500px) {
-    .page_footer {
-        flex-grow: 1;
-    }
 
     .image_background {
         max-width: 450px;

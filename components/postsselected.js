@@ -6,7 +6,7 @@ export default function postsSelected({posts, styles}) {
             {posts ? posts.map((post,index)=>{
                 return (
                     <li key={post.id}>
-                        <Link href={`/post/${post.slug}`}>
+                        <Link href={`/p/${post.slug}`}>
                         {post.title}
                         </Link>
                     </li>

@@ -9,7 +9,7 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/posts': { page: '/posts' },
-      '/post/blog-next-js-y-markdown': { page: '/post/[slug]', query: { slug: 'blog-next-js-y-markdown' } },
+      '/p/blog-next-js-y-markdown': { page: '/p/[slug]', query: { slug: 'blog-next-js-y-markdown' } },
     }
   }
 }

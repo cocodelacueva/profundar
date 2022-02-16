@@ -16,7 +16,7 @@ export default function PostShort(post) {
                 {post.shortDescription}
             </div>
 
-            <Link href={`/post/${post.slug}`}>
+            <Link href={`/p/${post.slug}`}>
                 <a className={styles.cta}>Profundar</a>
             </Link>
 

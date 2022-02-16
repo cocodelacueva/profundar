@@ -56,7 +56,7 @@ export default function Post( { source, frontmatter } ) {
                 
                 <PostsSelected posts={postsSelectionFilter} styles={styles.posts_selected_container} />
 
-                <img src="./images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
+                <img src="/images/profundar.svg" alt="©Profundate por Emi" className={styles.image_background} />
             </footer>
         </div>
         
@@ -68,7 +68,7 @@ export default function Post( { source, frontmatter } ) {
 
 //get data from fake db
 // Post.getInitialProps = async (ctx) => {
-//     const res = await fetch(`http://localhost:3000/api/post/${ctx.query.slug}`)
+//     const res = await fetch(`http://localhost:3000/api/p/${ctx.query.slug}`)
 //     const json = await res.json()
 //     return { data: json }
 // }
