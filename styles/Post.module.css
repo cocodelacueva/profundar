@@ -171,6 +171,10 @@
         justify-content: space-between;
     }
 
+    .main_container {
+        max-width: 70%;
+    }
+
     .page_footer {
         margin-top: 2rem;
         max-width: 640px;
