@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './styles/PostShort.module.css'
+import styles from './styles/Postshort.module.css'
 
 export default function PostShort(post) {
     //textos
