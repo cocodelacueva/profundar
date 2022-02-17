@@ -344,4 +344,4 @@ Por lo tanto una vez que modificamos *next.config.js* con el método exportPathM
 
 Espero que haya servido el ejemplo, para ver el código completo, los invito a visitar el [repositorio](https://github.com/cocodelacueva/profundar).
 
-Gracias, vuelva prontos!
+*Gracias, ¡vuelva prontos!*

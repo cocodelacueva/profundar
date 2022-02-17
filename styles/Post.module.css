@@ -102,6 +102,16 @@
     text-decoration: underline;
 }
 
+.content_post pre {
+    background: #333;
+    display: block;
+    padding: 1rem;
+    font-family: monospace;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
 .footer_post {
     margin-top: 3rem;
 }
