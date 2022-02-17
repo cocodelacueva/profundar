@@ -1,5 +1,5 @@
 ---
-id: 3
+id: 4
 title: "CMS con Strapi"
 date: "2022-02-14"
 shortDescription: 'Armar un CMS con Strapi, un open-source headless CMS totalmente customizable.'
