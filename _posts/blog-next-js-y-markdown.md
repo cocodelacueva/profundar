@@ -212,6 +212,7 @@ Para ver el archivo final hacer click [aquí](https://github.com/cocodelacueva/p
 Ahora que tenemos las dependencias y nuestras funciones listas, necesitamos armar las páginas que van a mostrar, por un lado la lista de posts, y por otro el post individual. Empecemos con el listado.
 
 El esquema básico de cualquier archivo de páginas sería:
+
 ```js
 export default function Posts({posts}) {
   return(
@@ -339,7 +340,7 @@ Además, en el archivo, podemos agregar otras propiedades, por ejemplo:
 
 Por lo tanto una vez que modificamos *next.config.js* con el método exportPathMap ya podemos construir el sitio. Next va a crear una carpeta llamada *out* y esta misma se puede subir directo al servidor.
 
-**Nota**: Cuando se arma un sitio estático hay muchas funciones del framework que no están soportadas. Por ejemplo: Image. En este caso hay que utilizar la etiqueta html <img> y linkearla directamente.
+**Nota**: Cuando se arma un sitio estático hay muchas funciones del framework que no están soportadas. Por ejemplo: Image. En este caso hay que utilizar la etiqueta html "<img />" y linkearla directamente.
 
 Espero que haya servido el ejemplo, para ver el código completo, los invito a visitar el [repositorio](https://github.com/cocodelacueva/profundar).
 
