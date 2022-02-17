@@ -1,7 +1,7 @@
 ---
 id: 0
 title: "Blog con NextJS y Markdown"
-date: "2022-02-10"
+date: "2022-02-17"
 shortDescription: 'Aprendiendo a armar un blog con Next JS. Utilizando la modalidad server render o generando archivo estáticos con MD.'
 docs: "https://nextjs.org/docs/getting-started"
 related: 'CMS con Contentful|cms-con-contentful, CMS con Strapi|cms-con-strapi,Vercel|vercel'
@@ -345,3 +345,9 @@ Por lo tanto una vez que modificamos *next.config.js* con el método exportPathM
 Espero que haya servido el ejemplo, para ver el código completo, los invito a visitar el [repositorio](https://github.com/cocodelacueva/profundar).
 
 *Gracias, ¡vuelva prontos!*
+
+#### Proximos pasos:
+
+* Hacer un deploy para mostrar el [sitio](https://profundar.vercel.app/p/vercel/).
+* Crear una api o un CMS para crear los posts de otra manera
+
