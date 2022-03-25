@@ -59,22 +59,24 @@ Hasta estos 3 puntos tenemos un entorno de desarrollo y configuracion de build d
 
 En este paso agregaremos una carpeta `src` a nuestro root y dentro de esta una carpeta assets para colocar la carpeta css, fonts, images y js ademas del archivo index.html y una carpeta about con un index.html. Nos quedaria una estructura asi:
 
+```
 node_modules  
 src  
     about/  
-        - index.html
+        index.html
     assets/  
         css/  
-            - style.css  
+            style.css  
         fonts/  
         images/  
-            - favicon.svg  
+            favicon.svg  
         js  
-            - main.js  
-    - index.html  
+            main.js  
+    index.html  
 .gitignore  
 package.json  
 package-lock.json  
+```
 
 Al cambiar la estructura por default que trae Vite, tendremos un problema al crear el build. La primera vez que lo creemos no habra problema pero cuando tengamos un build existente y realizamos otro, este no se reemplazara automaticamente por el nuevo, para que esto funcione debemos cambiar el script del build en el package.json.
 `"build": "vite build --emptyOutDir"`, de esta manera al realizar un nuevo build, el script primero se encarga de vaciar el directorio donde se guarda el mismo primero.
