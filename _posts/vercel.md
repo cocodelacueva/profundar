@@ -1,9 +1,11 @@
 ---
-id: 3
+id: 5
 title: "VERCEL"
 date: "2022-02-16"
 shortDescription: "Plataforma para frontend frameworks y sitios estáticos. Igual que Heroku, github pages y muchas otras, está pensada para hacer el deploy algo muy fácil"
 docs: "https://vercel.com/docs"
+author: "coco"
+authorurl: "https://www.linkedin.com/in/cocodelacueva/"
 related: 'Blog con NextJS y Markdown|blog-next-js-y-markdown, CMS con Contentful|cms-con-contentful, CMS con Strapi|cms-con-strapi'
 ---
 

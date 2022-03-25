@@ -4,7 +4,9 @@ title: "Armando un acordeon sin JS"
 date: "2022-02-16"
 shortDescription: "¿Es posible armar un acordeon sin utilizar Javascript? Ahora sí."
 docs: "https://developer.mozilla.org/es/docs/Web/HTML/Element/details"
-related: ''
+author: "coco"
+authorurl: "https://www.linkedin.com/in/cocodelacueva/"
+related: 'Construyendo páginas con Vite|construyendo-paginas-con-vite'
 ---
 
 # Armando un acordeon sin JS

@@ -152,6 +152,10 @@
     text-decoration: underline;
 }
 
+.authorData {
+    font-size: .8rem;
+}
+
 @media (min-width: 768px) {
     .footer_post {
         margin-top: 5rem;

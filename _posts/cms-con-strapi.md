@@ -4,6 +4,8 @@ title: "CMS con Strapi"
 date: "2022-02-14"
 shortDescription: 'Armar un CMS con Strapi, un open-source headless CMS totalmente customizable.'
 docs: "https://strapi.io/resource-center"
+author: "coco"
+authorurl: "https://www.linkedin.com/in/cocodelacueva/"
 related: 'Blog con NextJS y Markdown|blog-next-js-y-markdown, CMS con Contentful|cms-con-contentful, Vercel|vercel'
 ---
 
