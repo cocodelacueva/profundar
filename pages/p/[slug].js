@@ -45,7 +45,7 @@ export default function Post( { source, frontmatter } ) {
         <div className={styles.grid}>
 
             <main role="main" className={styles.main_container}>
-                <h3 className={styles.authorData}>Escrito por: {frontmatter.author} | <a href={frontmatter.authorurl} target="_blank"><small>{frontmatter.authorurl}</small></a> </h3>
+                <h3 className={styles.authorData}>Escrito por: {frontmatter.author} | <a href={frontmatter.authorurl} target="_blank" rel="noreferrer"><small>{frontmatter.authorurl}</small></a></h3>
                 
                 <div className={styles.content_post}>
                     <MDXRemote {...source} />
